@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="ch">
 	<head>
-		<meta charset="utf-8">
-		<title>201819804王程霖canvas</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>网站设计与规划作业</title>
 		<style>
-			canvas{
-				border: 1px solid black;
-			}
-		</style>
+		    body {
+		      min-height: 100vh;
+		      display: flex;
+		      flex-direction: column;
+		      justify-content: center;
+		      align-items: center;
+		    }
+		  </style>
 	</head>
 	<body>
-		<canvas id="myCanvas" width="600" height="600" style="border: 1px solid skyblue;"></canvas>
-		<script type="text/javascript">
-			var c=document.getElementById("myCanvas")
-			var ctx=c.getContext("2d")
-			ctx.font="20px Arial"
-			ctx.beginPath();
-			ctx.fillStyle="rgb(6,40,90)";
-			ctx.arc(250, 250, 250, 0,2 * Math.PI);
-			ctx.fill();
-			
-			ctx.fillStyle = "rgb(38,99,200)";
-			ctx.beginPath();
-			ctx.arc(250, 300, 200, 0, 2 * Math.PI);
-			ctx.fill();
-			
-			ctx.fillStyle = "rgb(199,202,211)";
-			ctx.beginPath();
-			ctx.arc(250, 350, 150, 0, 2 * Math.PI);
-			ctx.fill();
-							
-			ctx.fillStyle = "rgb(38,99,200)";
-			ctx.beginPath();
-			ctx.arc(250, 400, 100, 0, 2 * Math.PI);
-			ctx.fill();
-			
-			ctx.fillStyle="red";
-			ctx.fillText("R:250",255,60);
-			ctx.fillText("R:200",255,160);
-			ctx.fillText("R:150",255,260);
-			ctx.fillText("R:100",255,400);
-			ctx.stroke();
-		</script>
+		<h3>201819921李尧</h3>
+		<canvas id="can" width="500" height="500">抱歉，您的浏览器不支持 Canvas，请使用其他浏览器</canvas>
+		  <script type="text/javascript">
+			  ; ((win, doc) => {
+			    const canvas = doc.querySelector('#can');
+			    const ctx = canvas.getContext('2d');
+			  
+			    ctx.beginPath();
+			    ctx.arc(250, 250, 250, 0, Math.PI * 2, false);
+			    ctx.fillStyle = 'rgb(6, 40, 90)';
+			    ctx.fill();
+			    ctx.closePath();
+			  
+			    ctx.beginPath();
+			    ctx.arc(250, 300, 200, 0, Math.PI * 2, false);
+			    ctx.fillStyle = 'rgb(38, 99, 200)';
+			    ctx.fill();
+			    ctx.closePath();
+			  
+			    ctx.beginPath();
+			    ctx.arc(250, 350, 150, 0, Math.PI * 2, false);
+			    ctx.fillStyle = 'rgb(199, 202, 211)';
+			    ctx.fill();
+			    ctx.closePath();
+			  
+			    ctx.beginPath();
+			    ctx.arc(250, 400, 100, 0, Math.PI * 2, false);
+			    ctx.fillStyle = 'rgb(38, 99, 200)';
+			    ctx.fill();
+			    ctx.closePath();
+			  })(window, document)
+		  </script>
 	</body>
 </html>
